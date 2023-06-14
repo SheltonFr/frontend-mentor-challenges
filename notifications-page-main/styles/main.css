@@ -1,0 +1,134 @@
+@font-face {
+  font-family: "Jakarta Medium";
+  font-weight: 500;
+  src: url(../assets/fonts/static/PlusJakartaSans-Medium.ttf) format("truetype");
+}
+@font-face {
+  font-family: "Jakarta Bolder";
+  font-weight: 800;
+  src: url(../assets/fonts/static/PlusJakartaSans-ExtraBold.ttf) format("truetype");
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Jakarta Medium";
+}
+
+ul {
+  list-style-type: none;
+}
+
+a {
+  color: black;
+  text-decoration: none;
+}
+
+body {
+  min-height: 100vh;
+  background-color: #f7fafd;
+  font-size: 14px;
+}
+
+.container {
+  width: 100%;
+  min-width: 23rem;
+  max-width: 40rem;
+  padding: 1.4rem;
+  margin: 0 auto;
+  background: #ffffff;
+  box-shadow: 0px 10px 15px -3px rgba(0, 0, 0, 0.1);
+  margin-top: 2rem;
+  border-radius: 8px;
+  margin-bottom: 2rem;
+}
+.container header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 0 0;
+}
+.container header h2 {
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+.container header h2 .counter {
+  background-color: #1c202b;
+  color: #ffffff;
+  padding: 0.04rem 0.5rem;
+  font-size: 1rem;
+  border-radius: 5px;
+  margin-left: 0.4rem;
+}
+.container header > span {
+  cursor: pointer;
+  opacity: 0.8;
+  transition: opacity 0.3s;
+}
+.container header > span:hover {
+  opacity: 1;
+}
+.container main {
+  margin-top: 1.4rem;
+}
+.container main .notification {
+  position: relative;
+  display: flex;
+  gap: 2rem;
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  align-items: center;
+}
+.container main .notification.unread {
+  background-color: #f7fafd;
+}
+.container main .notification.unread .content::after {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  background: #f65351;
+  right: -0.7rem;
+  top: 0.3rem;
+  border-radius: 50%;
+}
+.container main .notification .content {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  color: #5e6778;
+}
+.container main .notification .content p .username {
+  font-weight: 700;
+  color: #1c202b;
+  opacity: 0.8;
+  cursor: pointer;
+  transition: opacity 0.3s;
+}
+.container main .notification .content p .username:hover {
+  opacity: 1;
+}
+.container main .notification .content p .event {
+  font-weight: bold;
+  transition: opacity 0.3s;
+  cursor: pointer;
+  opacity: 0.8;
+}
+.container main .notification .content p .event:hover {
+  opacity: 1;
+}
+.container main .notification .content .time {
+  font-size: 12px;
+  margin-top: 0.3rem;
+  color: #939dae;
+}
+.container main .notification img {
+  width: 50px;
+  height: 50px;
+  display: block;
+  object-fit: cover;
+}
+.container main .notification + .notification {
+  margin-top: 8px;
+}/*# sourceMappingURL=main.css.map */
