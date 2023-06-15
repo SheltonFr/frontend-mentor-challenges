@@ -78,9 +78,14 @@ body {
   padding: 0.5rem 1rem;
   border-radius: 8px;
   align-items: center;
+  transition: background-color 0.3s ease-in-out;
 }
 .container main .notification.unread {
+  cursor: pointer;
   background-color: #f7fafd;
+}
+.container main .notification.unread:hover {
+  background-color: #e5effa;
 }
 .container main .notification.unread .content p {
   width: fit-content;

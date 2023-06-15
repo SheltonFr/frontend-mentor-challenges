@@ -51,10 +51,14 @@
       padding: 0.5rem 1rem;
       border-radius: 8px;
       align-items: center;
-
+      transition: background-color .3s ease-in-out;
       &.unread {
+        cursor: pointer;
         background-color: $neutral-50;
 
+        &:hover {
+          background-color: $neutral-100;
+        }
         .content {
           p {
             width: fit-content;
