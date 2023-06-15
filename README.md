@@ -8,7 +8,7 @@
 | # | Name | Repository | Live Preview |
 | --|----- | ----------- | ----------- | 
 | 1 | Newslatter sign up for | [Code](https://github.com/SheltonFr/frontend-mentor-challenges/tree/main/newsletter-sign-up-with-success-message) | [Live](https://sheltonfr.github.io/frontend-mentor-challenges/newsletter-sign-up-with-success-message/) |
-| 2 | Notification Page | |
+| 2 | Notification Page | [code](https://github.com/SheltonFr/frontend-mentor-challenges/tree/main/notifications-page-main) | [live](https://sheltonfr.github.io/frontend-mentor-challenges/notifications-page-main/)
 
 
 
