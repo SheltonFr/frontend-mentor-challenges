@@ -1,0 +1,31 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500&display=swap");
+
+* {
+  font-family: "Space Grotesk", sans-serif;
+}
+
+/* Remove arrows from input type number */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.aside-bg {
+  background: url('./assets/bg-main-desktop.png') no-repeat center/cover;
+}
+
+.input {
+  @apply w-full border p-3  rounded-md border-solid outline-none
+}
+
+.card-front {
+  background: url('./assets/bg-card-front.png') no-repeat center/cover;
+}
+.card-back {
+  background: url('./assets/bg-card-back.png') no-repeat center/cover;
+}
