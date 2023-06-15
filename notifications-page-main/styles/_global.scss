@@ -55,22 +55,28 @@
       &.unread {
         background-color: $neutral-50;
 
-        .content::after {
-          content: "";
-          display: block;
-          position: absolute;
-          width: 8px;
-          height: 8px;
-          background: $primary-red;
+        .content {
+          p {
+            width: fit-content;
+            display: flex;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 0.4rem;
 
-          right: -.7rem;
-          top: 0.3rem;
-          border-radius: 50%;
+            &::after {
+              content: "";
+              width: 8px;
+              height: 8px;
+              background-color: $primary-red;
+              border-radius: 50%;
+            }
+          }
         }
       }
 
       .content {
         position: relative;
+        width: 100%;
         display: flex;
         flex-direction: column;
         color: $neutral-250;
@@ -113,10 +119,40 @@
         height: 50px;
         display: block;
         object-fit: cover;
+        cursor: pointer;
       }
 
       & + .notification {
         margin-top: 8px;
+      }
+
+      &.message {
+        align-items: flex-start;
+
+        .content {
+          textarea {
+            margin-top: 0.7rem;
+            resize: none;
+            padding: 1rem;
+            width: 100%;
+            text-align: left;
+            color: $neutral-200;
+            border-radius: 8px;
+            border: 1px solid $neutral-150;
+            outline: none;
+            transition: background-color 0.2s, color 0.2s;
+
+            &::-webkit-scrollbar {
+              display: none;
+            }
+
+            &:hover,
+            &:focus {
+              background-color: $neutral-100;
+              color: $neutral-250;
+            }
+          }
+        }
       }
     }
   }

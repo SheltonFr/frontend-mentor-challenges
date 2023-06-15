@@ -82,19 +82,23 @@ body {
 .container main .notification.unread {
   background-color: #f7fafd;
 }
-.container main .notification.unread .content::after {
+.container main .notification.unread .content p {
+  width: fit-content;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+}
+.container main .notification.unread .content p::after {
   content: "";
-  display: block;
-  position: absolute;
   width: 8px;
   height: 8px;
-  background: #f65351;
-  right: -0.7rem;
-  top: 0.3rem;
+  background-color: #f65351;
   border-radius: 50%;
 }
 .container main .notification .content {
   position: relative;
+  width: 100%;
   display: flex;
   flex-direction: column;
   color: #5e6778;
@@ -128,7 +132,30 @@ body {
   height: 50px;
   display: block;
   object-fit: cover;
+  cursor: pointer;
 }
 .container main .notification + .notification {
   margin-top: 8px;
+}
+.container main .notification.message {
+  align-items: flex-start;
+}
+.container main .notification.message .content textarea {
+  margin-top: 0.7rem;
+  resize: none;
+  padding: 1rem;
+  width: 100%;
+  text-align: left;
+  color: #939dae;
+  border-radius: 8px;
+  border: 1px solid #dde7ee;
+  outline: none;
+  transition: background-color 0.2s, color 0.2s;
+}
+.container main .notification.message .content textarea::-webkit-scrollbar {
+  display: none;
+}
+.container main .notification.message .content textarea:hover, .container main .notification.message .content textarea:focus {
+  background-color: #e5effa;
+  color: #5e6778;
 }/*# sourceMappingURL=main.css.map */
