@@ -30,8 +30,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Code](https://github.com/SheltonFr/frontend-mentor-challenges/tree/main/notifications-page-main)
-- Live Site URL: [Live](https://sheltonfr.github.io/frontend-mentor-challenges/notifications-page-main/)
+- Solution URL: [Code](https://github.com/SheltonFr/frontend-mentor-challenges/tree/main/notifications-page)
+- Live Site URL: [Live](https://sheltonfr.github.io/frontend-mentor-challenges/notifications-page/)
 
 ## My process
 
