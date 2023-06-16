@@ -9,6 +9,7 @@
 | --|----- | ----------- | ----------- | 
 | 1 | Newslatter sign up for | [Code](https://github.com/SheltonFr/frontend-mentor-challenges/tree/main/newsletter-sign-up-with-success-message) | [Live](https://sheltonfr.github.io/frontend-mentor-challenges/newsletter-sign-up-with-success-message/) |
 | 2 | Notification Page | [code](https://github.com/SheltonFr/frontend-mentor-challenges/tree/main/notifications-page) | [live](https://sheltonfr.github.io/frontend-mentor-challenges/notifications-page/)
+| 3 | results summary component | [code](https://github.com/SheltonFr/frontend-mentor-challenges/tree/main/results-summary-component) | [live](https://sheltonfr.github.io/frontend-mentor-challenges/results-summary-component/)
 
 
 
