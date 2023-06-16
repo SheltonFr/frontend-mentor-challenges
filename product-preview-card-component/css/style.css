@@ -76,6 +76,7 @@ body {
 .product__details .product__category {
     text-transform: uppercase;
     letter-spacing: .3rem;
+    font-size: var(--fs-100);
 }
 
 .product__details .product__name {
