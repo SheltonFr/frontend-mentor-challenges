@@ -1,0 +1,23 @@
+@import url("https://fonts.googleapis.com/css2?family=Barlow&family=Barlow+Condensed:wght@400;700&family=Bellefair&display=swap");
+
+:root {
+  --clr-dark: #0b0d17;
+  --clr-light: #d0d6f9;
+  --clr-white: #ffffff;
+
+  --ff-accent: "Barlow", sans-serif;
+  --ff-body: "Barlow Condensed", sans-serif;
+  --ff-heading: "Bellefair", serif;
+
+  --fs-100: 0.875rem;
+  --fs-150: 1rem;
+  --fs-200: 1.75rem;
+  --fs-250: 2rem;
+  --fs-300: 3.5rem;
+  --fs-400: 6.25rem;
+  --fs-600: 5rem;
+
+  --lt-spacing-100: 0.146875rem;
+  --lt-spacing-150: 0.16875rem;
+  --lt-spacing-200: 0.296875rem;
+}

@@ -1,3 +1,225 @@
+@import url("https://fonts.googleapis.com/css2?family=Barlow&family=Barlow+Condensed:wght@400;700&family=Bellefair&display=swap");
+:root {
+  --clr-dark: #0b0d17;
+  --clr-light: #d0d6f9;
+  --clr-white: #ffffff;
+  --ff-accent: "Barlow", sans-serif;
+  --ff-body: "Barlow Condensed", sans-serif;
+  --ff-heading: "Bellefair", serif;
+  --fs-100: 0.875rem;
+  --fs-150: 1rem;
+  --fs-200: 1.75rem;
+  --fs-250: 2rem;
+  --fs-300: 3.5rem;
+  --fs-400: 6.25rem;
+  --fs-600: 5rem;
+  --lt-spacing-100: 0.146875rem;
+  --lt-spacing-150: 0.16875rem;
+  --lt-spacing-200: 0.296875rem;
+}
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+img, svg {
+  display: block;
+  max-width: 100%;
+}
+
 body {
-  font-size: 15px;
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+body > * {
+  min-height: 100vh;
+  font-family: var(--ff-body);
+  color: var(--clr-light);
+}
+
+.home {
+  position: relative;
+  background: url("../../assets/home/background-home-mobile.jpg") no-repeat center/cover;
+  text-align: center;
+}
+.home main {
+  padding: 1rem;
+  display: grid;
+  gap: 7rem;
+  min-height: 100%;
+  margin-top: 1rem;
+}
+.home main .content {
+  display: grid;
+  gap: 2rem;
+}
+.home main .content .intro {
+  text-transform: uppercase;
+  font-size: var(--fs-150);
+  letter-spacing: var(--lt-spacing-150);
+}
+.home main .content .intro-accent {
+  font-family: var(--ff-heading);
+  text-transform: uppercase;
+  font-size: var(--fs-600);
+  color: var(--clr-white);
+}
+.home main .content .intro-description {
+  --text-width: 327px;
+  line-height: 1.3;
+  margin: auto;
+  font-size: var(--fs-150);
+  width: var(--text-width);
+  font-family: var(--ff-accent);
+}
+.home main button {
+  --width: 9.375rem;
+  width: var(--width);
+  aspect-ratio: 1/1;
+  margin: 0 auto;
+  border-radius: 50%;
+  color: var(--clr-dark);
+  font-size: 20px;
+  font-family: var(--ff-heading);
+  text-transform: uppercase;
+}
+@media (min-width: 768px) {
+  .home {
+    background-image: url("../../assets/home/background-home-tablet.jpg");
+  }
+  .home main .content .intro {
+    --fs-150: 20px;
+  }
+  .home main .content .intro-accent {
+    --fs-600: 150px;
+  }
+  .home main .content .intro-description {
+    --text-width: 444px;
+  }
+  .home main button {
+    --width: 242px;
+    font-size: 32px;
+  }
+}
+@media (min-width: 1440px) {
+  .home {
+    background-image: url("../../assets/home/background-home-desktop.jpg");
+  }
+  .home main {
+    margin: auto;
+    max-width: 1170px;
+    grid-template-columns: 1fr 1fr;
+    text-align: left;
+    padding-top: 10rem;
+  }
+  .home main .content .intro {
+    --fs-150: 28px;
+  }
+  .home main .content .intro-accent {
+    --fs-600: 150px;
+  }
+  .home main .content .intro-description {
+    --text-width: 444px;
+    --fs-150: 18px;
+    letter-spacing: 2.7px;
+    margin: 0;
+  }
+  .home main button {
+    --width: 242px;
+    font-size: 32px;
+    display: block;
+    margin-right: 0;
+    margin-top: 25%;
+  }
+}
+
+.header {
+  position: sticky;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem;
+  height: 96px;
+}
+.header .header__nav {
+  display: none;
+}
+@media screen and (min-width: 768px) {
+  .header {
+    padding: 0 0 0 2.4375rem;
+  }
+  .header .header__nav {
+    display: unset;
+    background-color: rgba(255, 255, 255, 0.04);
+    padding: 2rem 3rem;
+  }
+  .header .header__nav ul {
+    display: flex;
+    gap: 1.5rem;
+  }
+  .header .header__nav ul li {
+    text-transform: uppercase;
+    letter-spacing: 2.36px;
+  }
+  .header .header__nav ul li .number {
+    display: none;
+  }
+  .header .nav-button {
+    display: none;
+  }
+}
+@media (min-width: 1440px) {
+  .header {
+    padding: 2.5rem 0 0 3.4375rem;
+  }
+  .header .header__nav {
+    padding: 2rem 7rem;
+    backdrop-filter: blur(40.7742px);
+  }
+  .header .header__nav ul li .number {
+    display: inline;
+    color: var(--clr-white);
+  }
 }/*# sourceMappingURL=style.css.map */
