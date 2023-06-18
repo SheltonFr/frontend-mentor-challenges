@@ -24,6 +24,10 @@ footer, header, hgroup, menu, nav, section {
 	display: block;
 }
 
+a {
+	color: inherit;
+	text-decoration: none;
+}
 img, svg {
 	display: block;
 	max-width: 100%;
@@ -47,8 +51,16 @@ table {
 	border-spacing: 0;
 }
 
+button, input, select {
+	border: none;
+	background-color: none;
+	outline: none;
+
+}
+
 body > *{
 	min-height: 100vh;
 	font-family: var(--ff-body);
 	color: var(--clr-light);
+	overflow-x: hidden;
 }
