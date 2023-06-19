@@ -1,0 +1,194 @@
+.crew {
+  position: relative;
+  background: url("../../assets/crew/background-crew-mobile.jpg") no-repeat
+    center/cover;
+
+  @media (min-width: 1140px) {
+    background: url("../../assets/crew/background-crew-desktop.jpg") no-repeat
+      center/cover;
+  }
+
+  @media (min-width: 768px) {
+    background: url("../../assets/crew/background-crew-tablet.jpg") no-repeat
+      center/cover;
+  }
+
+  text-align: center;
+
+  .container {
+    .columns {
+      padding: 1rem;
+      .intro {
+        text-transform: uppercase;
+        font-size: var(--fs-150);
+        letter-spacing: var(--lt-spacing-150);
+        color: var(--clr-ligh);
+
+        span {
+          color: #4e5057;
+        }
+      }
+
+      .grid {
+        display: grid;
+        margin-top: 3rem;
+        gap: 2rem;
+
+        .col-1 {
+          display: grid;
+          gap: 2rem;
+
+          .content {
+            .crew-charge {
+              font-family: var(--ff-heading);
+              text-transform: uppercase;
+              font-size: var(--fs-150);
+              color: #979797;
+              margin-bottom: 1rem;
+            }
+            .crew-name {
+              font-family: var(--ff-heading);
+              text-transform: uppercase;
+              font-size: var(--fs-200);
+              color: var(--clr-white);
+            }
+
+            .crew-description {
+              --text-width: 400px;
+              line-height: 25px;
+              margin: auto;
+              font-size: var(--fs-150);
+              width: var(--text-width);
+              font-family: var(--ff-accent);
+
+              border-bottom: 1px solid #383b4b;
+
+              --spacer: 2rem;
+              padding-bottom: var(--spacer);
+              margin-bottom: var(--spacer);
+              margin-top: var(--spacer);
+            }
+          }
+
+          .tabs {
+            grid-row: 1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 1.4rem;
+
+            li {
+              cursor: pointer;
+              width: 10px;
+              aspect-ratio: 1 /1;
+              border-radius: 50%;
+              background-color: #717171;
+
+              transition: background-color 0.3s ease-in-out;
+
+              &:hover {
+                background-color: #979797;
+              }
+
+              &[data-active-crew="true"] {
+                background-color: white;
+              }
+            }
+          }
+        }
+
+        .col-2 {
+          grid-row: 1;
+
+          img {
+            width: 177px;
+            margin: 0 auto;
+          }
+        }
+      }
+
+      @media (min-width: 768px) {
+        .intro {
+          text-align: left;
+        }
+
+        .grid {
+          .col-1 {
+            grid-row: 1;
+            gap: 0;
+            .tabs {
+              grid-row: auto;
+            }
+
+            .content {
+              .crew-charge {
+                font-size: 24px;
+              }
+              .crew-name {
+                font-size: 40px;
+              }
+
+              .crew-description {
+                width: 458px;
+              }
+            }
+          }
+
+          .col-2 {
+            grid-row: 2;
+
+            img {
+              width: 456px;
+            }
+          }
+        }
+      }
+      @media (min-width: 1440px) {
+        max-width: 1170px;
+        margin: auto;
+
+        .intro {
+          font-size: 28px;
+        }
+
+        .grid {
+          grid-template-columns: 1fr 1fr;
+          margin-top: 3rem;
+          gap: 4rem;
+          .col {
+            grid-row: unset;
+            place-content: center;
+            &.col-1 {
+              .content {
+                text-align: left;
+                margin-bottom: 2rem;
+
+                .crew-charge {
+                  font-size: 32px;
+                }
+
+                .crew-name {
+                  font-size: 56px;
+                }
+                .crew-description {
+                  margin-inline: 0;
+                  font-size: 18px;
+                  width: 444px;
+                }
+              }
+
+              .tabs {
+                justify-content: start;
+              }
+            }
+
+            &.col-2 {
+              width: 568px;
+              
+            }
+          }
+        }
+      }
+    }
+  }
+}

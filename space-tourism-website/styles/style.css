@@ -358,6 +358,163 @@ body > * {
   }
 }
 
+.crew {
+  position: relative;
+  background: url("../../assets/crew/background-crew-mobile.jpg") no-repeat center/cover;
+  text-align: center;
+}
+@media (min-width: 1140px) {
+  .crew {
+    background: url("../../assets/crew/background-crew-desktop.jpg") no-repeat center/cover;
+  }
+}
+@media (min-width: 768px) {
+  .crew {
+    background: url("../../assets/crew/background-crew-tablet.jpg") no-repeat center/cover;
+  }
+}
+.crew .container .columns {
+  padding: 1rem;
+}
+.crew .container .columns .intro {
+  text-transform: uppercase;
+  font-size: var(--fs-150);
+  letter-spacing: var(--lt-spacing-150);
+  color: var(--clr-ligh);
+}
+.crew .container .columns .intro span {
+  color: #4e5057;
+}
+.crew .container .columns .grid {
+  display: grid;
+  margin-top: 3rem;
+  gap: 2rem;
+}
+.crew .container .columns .grid .col-1 {
+  display: grid;
+  gap: 2rem;
+}
+.crew .container .columns .grid .col-1 .content .crew-charge {
+  font-family: var(--ff-heading);
+  text-transform: uppercase;
+  font-size: var(--fs-150);
+  color: #979797;
+  margin-bottom: 1rem;
+}
+.crew .container .columns .grid .col-1 .content .crew-name {
+  font-family: var(--ff-heading);
+  text-transform: uppercase;
+  font-size: var(--fs-200);
+  color: var(--clr-white);
+}
+.crew .container .columns .grid .col-1 .content .crew-description {
+  --text-width: 400px;
+  line-height: 25px;
+  margin: auto;
+  font-size: var(--fs-150);
+  width: var(--text-width);
+  font-family: var(--ff-accent);
+  border-bottom: 1px solid #383b4b;
+  --spacer: 2rem;
+  padding-bottom: var(--spacer);
+  margin-bottom: var(--spacer);
+  margin-top: var(--spacer);
+}
+.crew .container .columns .grid .col-1 .tabs {
+  grid-row: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1.4rem;
+}
+.crew .container .columns .grid .col-1 .tabs li {
+  cursor: pointer;
+  width: 10px;
+  aspect-ratio: 1/1;
+  border-radius: 50%;
+  background-color: #717171;
+  transition: background-color 0.3s ease-in-out;
+}
+.crew .container .columns .grid .col-1 .tabs li:hover {
+  background-color: #979797;
+}
+.crew .container .columns .grid .col-1 .tabs li[data-active-crew=true] {
+  background-color: white;
+}
+.crew .container .columns .grid .col-2 {
+  grid-row: 1;
+}
+.crew .container .columns .grid .col-2 img {
+  width: 177px;
+  margin: 0 auto;
+}
+@media (min-width: 768px) {
+  .crew .container .columns .intro {
+    text-align: left;
+  }
+  .crew .container .columns .grid .col-1 {
+    grid-row: 1;
+    gap: 0;
+  }
+  .crew .container .columns .grid .col-1 .tabs {
+    grid-row: auto;
+  }
+  .crew .container .columns .grid .col-1 .content .crew-charge {
+    font-size: 24px;
+  }
+  .crew .container .columns .grid .col-1 .content .crew-name {
+    font-size: 40px;
+  }
+  .crew .container .columns .grid .col-1 .content .crew-description {
+    width: 458px;
+  }
+  .crew .container .columns .grid .col-2 {
+    grid-row: 2;
+  }
+  .crew .container .columns .grid .col-2 img {
+    width: 456px;
+  }
+}
+@media (min-width: 1440px) {
+  .crew .container .columns {
+    max-width: 1170px;
+    margin: auto;
+  }
+  .crew .container .columns .intro {
+    font-size: 28px;
+  }
+  .crew .container .columns .grid {
+    grid-template-columns: 1fr 1fr;
+    margin-top: 3rem;
+    gap: 4rem;
+  }
+  .crew .container .columns .grid .col {
+    grid-row: unset;
+    place-content: center;
+  }
+  .crew .container .columns .grid .col.col-1 .content {
+    text-align: left;
+    margin-bottom: 2rem;
+  }
+  .crew .container .columns .grid .col.col-1 .content .crew-charge {
+    font-size: 32px;
+  }
+  .crew .container .columns .grid .col.col-1 .content .crew-name {
+    font-size: 56px;
+  }
+  .crew .container .columns .grid .col.col-1 .content .crew-description {
+    margin-inline: 0;
+    font-size: 18px;
+    width: 444px;
+  }
+  .crew .container .columns .grid .col.col-1 .tabs {
+    justify-content: start;
+  }
+  .crew .container .columns .grid .col.col-2 {
+    width: 568px;
+  }
+}
+
 .header {
   position: sticky;
   display: flex;
@@ -403,6 +560,9 @@ body > * {
   font-size: var(--fs-150);
 }
 .header .nav-button {
+  width: 21px;
+  aspect-ratio: 1;
+  background: url("../../assets/shared/icon-hamburger.svg");
   z-index: 3000;
 }
 @media screen and (min-width: 768px) {

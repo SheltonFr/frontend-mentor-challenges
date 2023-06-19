@@ -49,6 +49,9 @@
     }
   }
   .nav-button {
+    width: 21px;
+    aspect-ratio: 1;
+    background: url("../../assets/shared/icon-hamburger.svg");
     z-index: 3000;
   }
   @media screen and (min-width: 768px) {
@@ -70,7 +73,7 @@
           text-transform: uppercase;
           letter-spacing: 2.36px;
           padding: 2rem 0;
-          transition: border-color .4s ease;
+          transition: border-color 0.4s ease;
           border-bottom: 1px solid transparent;
 
           &:hover {
