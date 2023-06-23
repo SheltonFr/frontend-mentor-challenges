@@ -1,0 +1,113 @@
+.header {
+  position: sticky;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem;
+  height: 96px;
+  font-size: var(--fs-150);
+
+  .header__nav {
+    display: none;
+
+    &.mobile {
+      display: block;
+
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      height: 100vh;
+      right: -200%;
+      width: 18rem;
+      background: rgba(255, 255, 255, 0.04);
+      backdrop-filter: blur(40.7742px);
+
+      transition: right 0.3s ease-in-out;
+
+      &.active {
+        right: 0;
+      }
+
+      ul {
+        display: flex;
+        flex-direction: column;
+        gap: 3rem;
+        align-items: self-start;
+        padding: 4rem 5rem 0 2rem;
+        margin-top: 2rem;
+        li {
+          text-transform: uppercase;
+
+          .number {
+            color: var(--clr-white);
+            margin-right: 1.3rem;
+            font-size: var(--fs-150);
+          }
+        }
+      }
+      /* Note: backdrop-filter has minimal browser support */
+    }
+  }
+  .nav-button {
+    width: 21px;
+    aspect-ratio: 1;
+    background: url("../../assets/shared/icon-hamburger.svg");
+    z-index: 3000;
+  }
+  @media screen and (min-width: 768px) {
+    padding: 0 0 0 2.4375rem;
+    .header__nav {
+      display: unset;
+      padding: 0 7rem;
+
+      &.mobile {
+        display: none;
+      }
+
+      background-color: rgba(255, 255, 255, 0.04);
+      ul {
+        display: flex;
+        gap: 2rem;
+
+        li {
+          text-transform: uppercase;
+          letter-spacing: 2.36px;
+          padding: 2rem 0;
+          transition: border-color 0.4s ease;
+          border-bottom: 1px solid transparent;
+
+          &:hover {
+            border-color: rgba(255, 255, 255, 0.5);
+          }
+
+          &[data-active] {
+            border-color: white;
+          }
+          .number {
+            display: none;
+          }
+        }
+      }
+    }
+
+    .nav-button {
+      display: none;
+    }
+  }
+
+  @media (min-width: 1440px) {
+    padding: 2.5rem 0 0 3.4375rem;
+
+    .header__nav {
+      backdrop-filter: blur(40.7742px);
+      ul {
+        li {
+          .number {
+            display: inline;
+            color: var(--clr-white);
+          }
+        }
+      }
+    }
+  }
+}
