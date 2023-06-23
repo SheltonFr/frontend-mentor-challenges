@@ -515,6 +515,158 @@ body > * {
   }
 }
 
+.technology {
+  position: relative;
+  background: url("../../assets/technology/background-technology-mobile.jpg") no-repeat center/cover;
+}
+.technology .container .columns {
+  text-align: center;
+}
+.technology .container .columns .intro {
+  text-transform: uppercase;
+  font-size: var(--fs-150);
+  letter-spacing: var(--lt-spacing-150);
+  color: var(--clr-light);
+}
+.technology .container .columns .intro span {
+  color: #4e5057;
+}
+.technology .container .columns .grid {
+  display: grid;
+  margin-top: 2rem;
+}
+.technology .container .columns .grid .col-1 {
+  --circle-size: 40px;
+  grid-row: 2;
+}
+.technology .container .columns .grid .col-1 .tabs {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 2rem 0 1.2rem;
+}
+.technology .container .columns .grid .col-1 .tabs li {
+  display: grid;
+  place-content: center;
+  width: var(--circle-size);
+  aspect-ratio: 1/1;
+  border-radius: 50%;
+  border: 1px solid #373951;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+.technology .container .columns .grid .col-1 .tabs li:hover {
+  border-color: var(--clr-light);
+}
+.technology .container .columns .grid .col-1 .tabs li[data-active-technology=true] {
+  background-color: white;
+  color: #0b0d17;
+}
+.technology .container .columns .grid .col-1 .content {
+  --tech-name-size: 24px;
+  --terminology-size: 14px;
+  --tecgh-description-size: 15px;
+  --text-width: 400px;
+  --line-spacer: 25px;
+}
+.technology .container .columns .grid .col-1 .content .terminology {
+  font-family: var(--ff-heading);
+  text-transform: uppercase;
+  font-size: var(--terminology-size);
+  color: #979797;
+  margin-bottom: 1rem;
+}
+.technology .container .columns .grid .col-1 .content .tech-name {
+  font-family: var(--ff-heading);
+  text-transform: uppercase;
+  font-size: var(--tech-name-size);
+  color: var(--clr-white);
+}
+.technology .container .columns .grid .col-1 .content .tech-description {
+  line-height: 25px;
+  margin: auto;
+  font-size: var(--tecgh-description-size);
+  max-width: var(--text-width);
+  font-family: var(--ff-accent);
+  line-height: var(--line-spacer);
+  border-bottom: 1px solid #383b4b;
+  --spacer: 1.2rem;
+  padding-bottom: var(--spacer);
+  margin-bottom: var(--spacer);
+  margin-top: var(--spacer);
+}
+.technology .container .columns .grid .col-2 img {
+  width: 100%;
+}
+@media (min-width: 768px) {
+  .technology .container {
+    background: url("../../assets/technology/background-technology-tablet.jpg") no-repeat center/cover;
+  }
+  .technology .container .columns .intro {
+    padding: 1rem;
+    text-align: left;
+  }
+  .technology .container .columns .grid .col-1 {
+    --circle-size: 63px;
+  }
+  .technology .container .columns .grid .col-1 .content {
+    --tech-name-size: 40px;
+    --terminology-size: 16px;
+    --tecgh-description-size: 16px;
+    --text-width: 458px;
+    --line-spacer: 28px;
+  }
+}
+@media (min-width: 1140px) {
+  .technology .container {
+    background: url("../../assets/technology/background-technology-desktop.jpg") no-repeat center/cover;
+  }
+  .technology .container .columns .intro {
+    font-size: 28px;
+    margin-left: 5rem;
+  }
+  .technology .container .columns .grid {
+    grid-template-columns: 1fr 1fr;
+    margin-top: 3rem;
+    gap: 4rem;
+  }
+  .technology .container .columns .grid .col {
+    grid-row: unset;
+    place-content: center;
+    height: 527px;
+  }
+  .technology .container .columns .grid .col.col-1 {
+    text-align: left;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 3rem;
+  }
+  .technology .container .columns .grid .col.col-1 .tabs {
+    flex-direction: column;
+    gap: 2.3rem;
+  }
+  .technology .container .columns .grid .col.col-1 .content {
+    --tech-name-size: 56px;
+    --terminology-size: 16px;
+    --tecgh-description-size: 18px;
+    --text-width: 444px;
+    --line-spacer: 32px;
+  }
+  .technology .container .columns .grid .col.col-1 .content .tech-description {
+    margin-inline: 0;
+  }
+  .technology .container .columns .grid .col.col-2 {
+    display: flex;
+    justify-content: end;
+  }
+  .technology .container .columns .grid .col.col-2 img {
+    width: 527px;
+    max-height: 527px;
+  }
+}
+
 .header {
   position: sticky;
   display: flex;

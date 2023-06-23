@@ -70,4 +70,27 @@
 
     event.target.dataset.activeCrew = true;
   }
+
+  // TECHNOLOGY
+  const techTabs = document.querySelectorAll("[data-active-technology]");
+  const techName = document.querySelector(".tech-name");
+  const techDescription = document.querySelector(".tech-description");
+  const mobileImage = document.querySelector("#tech-photo");
+  const sourceImg = document.querySelector("source");
+
+  techTabs.forEach((tab) => tab.addEventListener("click", selectTech));
+
+  function selectTech(event) {
+    techTabs.forEach((tab) => (tab.dataset.activeTechnology = false));
+    const info = data.technology.find(
+      (tech) => tech.name === event.target.dataset.technology
+    );
+
+    techName.textContent = info.name;
+    techDescription.textContent = info.description;
+    mobileImage.setAttribute("src", `.${info.images["landscape"]}`);
+    sourceImg.setAttribute("srcset", `.${info.images["portrait"]}`);
+
+    event.target.dataset.activeTechnology = true;
+  }
 })();
