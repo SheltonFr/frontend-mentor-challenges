@@ -93,7 +93,7 @@ body > * {
 
 .home {
   position: relative;
-  background: url("../../assets/home/background-home-mobile.jpg") no-repeat center/cover;
+  background: url("../assets/home/background-home-mobile.jpg") no-repeat center/cover;
   text-align: center;
 }
 .home main {
