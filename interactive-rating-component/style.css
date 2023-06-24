@@ -1,0 +1,176 @@
+@import url("https://fonts.googleapis.com/css2?family=Overpass:wght@400;700&display=swap");
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+* {
+  margin: 0;
+  padding: 0;
+  font: inherit;
+}
+
+img,
+picture,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+ul,
+li,
+a {
+  list-style: none;
+  text-decoration: none;
+}
+
+:root {
+  --clr-primary: hsl(25, 97%, 53%);
+
+  --clr-neutral-100: hsl(0, 0%, 100%);
+  --clr-neutral-150: hsl(217, 12%, 63%);
+  --clr-neutral-200: hsl(216, 12%, 54%);
+  --clr-neutral-800: hsl(213, 19%, 18%);
+  --clr-neutral-900: hsl(216, 12%, 8%);
+
+  --fw-regular: 400;
+  --fw-bold: 700;
+
+  /* 
+  Mobile: 375px
+  Desktop: 1440px
+  */
+}
+
+body {
+  font-family: "Overpass", sans-serif;
+  font-weight: var(--fw-regular);
+  min-height: 100vh;
+  color: var(--clr-neutral-150);
+}
+
+html,
+body {
+  background-color: var(--clr-neutral-900);
+}
+p {
+  font-size: 15px;
+}
+
+main {
+  height: 100vh;
+  display: grid;
+  place-content: center;
+}
+
+.card {
+  margin: auto;
+  background-color: var(--clr-neutral-800);
+  border-radius: 16px;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: center;
+  gap: 2rem;
+  max-width: calc(100% - 2rem);
+  padding: 2rem;
+}
+
+#thank {
+    text-align: center;
+}
+
+#thank > p {
+    color: var(--clr-primary);
+    background-color: hsla(216, 12%, 54%, 0.15);
+    border-radius: 100vh;
+    padding: .3rem 1rem;
+    margin: auto;
+}
+
+#thank .content {
+    text-align: center;
+}
+.image-container {
+    display: grid;
+    width: 100%;
+    place-content: center;
+}
+#icon-star {
+  color: var(--clr-primary);
+  background-color: hsla(216, 12%, 54%, 0.15);
+  padding: 14px;
+  border-radius: 50%;
+}
+
+.content {
+  text-align: left;
+}
+.content h1 {
+  color: var(--clr-neutral-100);
+  font-weight: var(--fw-bold);
+  font-size: 2rem;
+  margin-bottom: 0.7rem;
+}
+
+.content p {
+  line-height: 20px;
+  font-weight: var(--fw-regular);
+}
+
+.stars {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.stars li {
+  border-radius: 50%;
+  background-color: hsla(216, 12%, 54%, 0.15);
+  width: 48px;
+  aspect-ratio: 1 / 1;
+  display: grid;
+  place-content: center;
+  cursor: pointer;
+  transition: all 0.35s ease-in-out;
+}
+
+.stars li:hover,
+.stars li:active {
+  color: var(--clr-neutral-100);
+  background-color: var(--clr-primary);
+}
+
+.stars li[data-selected] {
+  color: var(--clr-neutral-100);
+  background-color: var(--clr-neutral-150);
+}
+
+button {
+  width: 100%;
+  padding: 0.6rem 3rem;
+  border-radius: 100vh;
+  background-color: var(--clr-primary);
+  text-transform: uppercase;
+  color: var(--clr-neutral-100);
+  font-weight: var(--fw-regular);
+  cursor: pointer;
+  transition: all 0.35s ease-in-out;
+}
+
+button:hover {
+  color: var(--clr-primary);
+  background-color: var(--clr-neutral-100);
+}
+
+.hidden {
+  display: none;
+}
+
+@media screen and (min-width: 426px) {
+  .card {
+    width: 420px;
+  }
+}
